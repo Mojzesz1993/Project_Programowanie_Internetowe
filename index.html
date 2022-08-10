@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Projekt zaliczeniowy - programowanie internetowe." />
+        <meta name="author" content="Hubert Organiściak 74216" />
+        <title>Generator haseł online</title>
+
+        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+        <link href="CSS/main.css" rel="stylesheet" />
+        <link href="CSS/carousel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="nav">
+            <ul>
+                <li><a href="#passwordGenerator" class='link'>Generator haseł</a></li>
+                <li><a href="#cats" class='link'>Koty, aby zdać</a></li>
+                <li><a href="#certificate" class='link'>Certyfikat</a></li>
+                <li><a href="#shallIPass" class='link'>Czy zdam na 5?</a></li>
+            </ul>
+        </nav>
+            <section id="passwordGenerator" class="section passwordGenerator">
+                <label class="label">Wybierz długość hasła</label>
+                <select id="charLen" name="charLen" class="field">
+                    <option value="8" selected >8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+                <input class="button" type="button" onclick="generatePassword(charLen.value)" value="Generuj hasło">
+                <input class="field" type="text" id="output" >
+
+                <input class="button" type="button" onclick="copyPassword()" value="Kopiuj">
+            </section>
+            
+
+            <section id="cats" class="section cats">
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade" style="display: none">
+                        <img src="IMAGES/CATS/1.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides fade" style="display: none">
+                        <img src="IMAGES/CATS/2.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides fade" style="display: none">
+                        <img src="IMAGES/CATS/3.jpg" style="width:100%">
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </section>
+
+            <section id="certificate" class="section certificate">
+                <h1 class="header1">A gdzie obiecany certyfikat??</h1>
+                <button class="button" onClick="showImage()">Poszukajmy!</button>
+                <div id="img" class="photoContainer">
+                    <img src="IMAGES/cert.jpg" class="photo" />
+                </div>
+            </section>
+            <section id="shallIPass" class="section shallIPass">
+                <h1 class="header1">Czy zdałem na 5?</h1>
+                <input class="button" type="button" onclick="answerGenerator()" value="Sprawdź!">
+                <h2 class="header2" id="answer">...</h2>
+            </section>
+    </body>
+    <footer class="footer">
+        <p>Strona powstała na potrzeby projektu zaliczeniowego z przedmiotu Programowanie Internetowe</p>
+        <p>Projekt przygotował: Hubert Organiściak nr. albumu: 47216</p>
+    </footer>
+        <script language="JavaScript" type="text/javascript" src="JS/passwordGenerator.js"></script> 
+        <script language="JavaScript" type="text/javascript" src="JS/answerGenerator.js"></script>
+        <script language="JavaScript" type="text/javascript" src="JS/carousel.js"></script>
+        <script language="JavaScript" type="text/javascript" src="JS/certificate.js"></script>
+</html>
